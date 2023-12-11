@@ -25,7 +25,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _api = Api();
   String error = '';
   bool passwordVisible = true;
-  bool passwordVisible2 = true;
   String? phoneNumber;
   List<String> errors = [];
   final _formKey = GlobalKey<FormState>();
@@ -36,7 +35,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var phone;
   TextEditingController euController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController passwordConfirmController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController nameController = TextEditingController();
 
@@ -104,7 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             borderRadius: BorderRadius.circular(50.0),
                           ),
                           hintText: ' Phone number ',
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             color: Color.fromRGBO(0, 0, 0, 0.3),
                             fontFamily: 'Cairo',
                           ),
@@ -115,7 +113,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       child: TextFormField(
                           textAlign: TextAlign.start,
                           controller: passwordController,
@@ -124,7 +122,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             hintText: 'password',
                             enabledBorder: OutlineInputBorder(
                               borderSide:
-                              BorderSide(width: 2, color: Colors.grey),
+                              const BorderSide(width: 2, color: Colors.grey),
                               borderRadius: BorderRadius.circular(50.0),
                             ),
                           ),
@@ -136,28 +134,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ])),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                      child: TextFormField(
-                          textAlign: TextAlign.start,
-                          controller: passwordConfirmController,
-                          obscureText: passwordVisible,
-                          decoration: InputDecoration(
-                            hintText: 'Re-enter password',
-                            enabledBorder: OutlineInputBorder(
-                              borderSide:
-                              BorderSide(width: 2, color: Colors.grey),
-                              borderRadius: BorderRadius.circular(50.0),
-                            ),
-                          ),
-                          validator: MultiValidator([
-                            RequiredValidator(errorText: "* Required"),
-                            MinLengthValidator(6,
-                                errorText:
-                                "Password should be atleast 6 characters"),
-                          ])),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       child: ElevatedButton(
                         onPressed: isSigningUp ? null : () => signup(),
                         child: isSigningUp
