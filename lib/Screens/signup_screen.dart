@@ -150,6 +150,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               strokeWidth: 2,
                             ),
                           )
+
                               : Text(
                             'Signup',
                             style: TextStyle(fontSize: 20),
