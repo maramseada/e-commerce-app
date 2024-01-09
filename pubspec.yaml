@@ -12,7 +12,11 @@ environment:
 dependencies:
   http:
   flutter_screenutil:
+  flutter_polyline_points:
   google_maps_flutter:
+  location:
+  flutter_svg:
+
   flutter:
     sdk: flutter
   font_awesome_flutter:

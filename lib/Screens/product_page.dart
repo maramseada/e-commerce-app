@@ -133,7 +133,7 @@ class ProductPage extends StatelessWidget {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(
                                           50)))),
-                              child: Text('Go to maps', style: TextStyle(fontSize: 16.sp),),
+                              child: Text('Go to maps', style: TextStyle(fontSize: 16.sp, color: Colors.white),),
                             )
                           ],
                         )),

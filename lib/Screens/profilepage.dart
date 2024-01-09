@@ -38,7 +38,7 @@ centerTitle: true,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(
                             50)))),
-                child: Text('Logout', style: TextStyle(fontSize: 16.sp),),
+                child: Text('Logout', style: TextStyle(fontSize: 16.sp, color: Colors.white),),
               )
           )
       ),

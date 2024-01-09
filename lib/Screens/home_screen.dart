@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF195D81),
-          title: Text('Home'),
+          title: Text('Home', style:TextStyle(color:Colors.white)),
           actions: [
             IconButton(
                 onPressed: () {
@@ -49,18 +49,18 @@ class _HomePageState extends State<HomePage> {
                     ),
                   );
                 },
-                icon: Icon(Icons.favorite)),
+                icon: Icon(Icons.favorite, color: Colors.white,)),
             IconButton(
                 onPressed: () {
                   Navigator.pushNamed(context,
                       '/profile'); // Navigate to the 'ProfilePage' route
                 },
-                icon: Icon(Icons.person)),
+                icon: Icon(Icons.person, color: Colors.white,)),
             IconButton(
                 onPressed: () {
                   showSearch(context: context, delegate: SearchData());
                 },
-                icon: Icon(Icons.search))
+                icon: Icon(Icons.search, color: Colors.white,))
           ],
         ),
         body: SafeArea(
